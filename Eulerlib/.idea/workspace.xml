@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ec1f0e0-6a4e-404b-83aa-f48a6a2892c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/substring_divisibility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eulerlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/eulerlib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gcd_speedtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/gcd_speedtest.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1RCTP12pxqnSU7m8pJrv2c9I7oZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/PythonTest" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.substring_divisibility">
+    <configuration name="eulerlib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyCharm Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eulerlib.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gcd_speedtest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyCharm Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gcd_speedtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="integer_right_triangles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyCharm Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/integer_right_triangles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="largest_exponential" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyCharm Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/largest_exponential.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="substring_divisibility" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyCharm Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/substring_divisibility.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.substring_divisibility" />
+        <item itemvalue="Python.gcd_speedtest" />
+        <item itemvalue="Python.integer_right_triangles" />
+        <item itemvalue="Python.eulerlib" />
+        <item itemvalue="Python.largest_exponential" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ec1f0e0-6a4e-404b-83aa-f48a6a2892c6" name="Default Changelist" comment="" />
+      <created>1569170049242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569170049242</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Euler problems">
+      <created>1569257955592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569257955593</updated>
+    </task>
+    <task id="LOCAL-00002" summary="quadratic solve and coded triangle numbers">
+      <created>1569263773044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569263773044</updated>
+    </task>
+    <task id="LOCAL-00003" summary="eulerlib quadratic moved to quadratic">
+      <created>1569264083767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569264083767</updated>
+    </task>
+    <task id="LOCAL-00004" summary="typo">
+      <created>1569278165564</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569278165564</updated>
+    </task>
+    <task id="LOCAL-00005" summary="pentagonal numbers + triangular, pentagonal, hexagonal">
+      <created>1569433922272</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569433922272</updated>
+    </task>
+    <task id="LOCAL-00006" summary="consecutive prime sums">
+      <created>1569602485089</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569602485089</updated>
+    </task>
+    <task id="LOCAL-00007" summary="problem solutions">
+      <created>1569769364519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569769364519</updated>
+    </task>
+    <task id="LOCAL-00008" summary="largest exponential ezpz problem">
+      <created>1569862921195</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569862921195</updated>
+    </task>
+    <task id="LOCAL-00009" summary="integer right triangles">
+      <created>1569872241991</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569872241992</updated>
+    </task>
+    <task id="LOCAL-00010" summary="integer right triangles comments">
+      <created>1569872737426</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569872737426</updated>
+    </task>
+    <task id="LOCAL-00011" summary="typos">
+      <created>1569873147211</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569873147211</updated>
+    </task>
+    <task id="LOCAL-00012" summary="primitive pythagorean triplets generator + bugfix problem 39">
+      <created>1569875641176</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569875641176</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update to generator">
+      <created>1569876890128</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569876890128</updated>
+    </task>
+    <task id="LOCAL-00014" summary="integer_right_triangles_lcd">
+      <created>1569879127752</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569879127752</updated>
+    </task>
+    <task id="LOCAL-00015" summary="print (a, b, c)">
+      <created>1569880198288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569880198288</updated>
+    </task>
+    <task id="LOCAL-00016" summary="simplify fraction">
+      <created>1569880617175</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569880617175</updated>
+    </task>
+    <task id="LOCAL-00017" summary="cool gcd variant speedtest">
+      <created>1569882775602</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1569882775602</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Euler problems" />
+    <MESSAGE value="quadratic solve and coded triangle numbers" />
+    <MESSAGE value="eulerlib quadratic moved to quadratic" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="pentagonal numbers + triangular, pentagonal, hexagonal" />
+    <MESSAGE value="consecutive prime sums" />
+    <MESSAGE value="problem solutions" />
+    <MESSAGE value="largest exponential ezpz problem" />
+    <MESSAGE value="integer right triangles" />
+    <MESSAGE value="integer right triangles comments" />
+    <MESSAGE value="typos" />
+    <MESSAGE value="primitive pythagorean triplets generator + bugfix problem 39" />
+    <MESSAGE value="update to generator" />
+    <MESSAGE value="integer_right_triangles_lcd" />
+    <MESSAGE value="print (a, b, c)" />
+    <MESSAGE value="simplify fraction" />
+    <MESSAGE value="cool gcd variant speedtest" />
+    <option name="LAST_COMMIT_MESSAGE" value="cool gcd variant speedtest" />
+  </component>
+</project>
