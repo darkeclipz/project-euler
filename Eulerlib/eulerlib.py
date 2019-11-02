@@ -723,3 +723,33 @@ def previous_permutation(P):
         j -= 1
 
     return P
+
+
+def prime_factorization(x, sieve=None):
+    """
+    Factorizes a number into the prime factorization.
+    Requires a sieve to be quick, if sieve is not specified
+    it will generate one itself.
+    :param x:
+    :param sieve:
+    :return:
+    """
+    if x == 0:
+        return []
+    if x in [1, 2]:
+        return [x]
+    if sieve is None:
+        sieve = prime_sieve(x)
+    factors = []
+    if sieve[x]:
+        return [x]
+    for i in range(2, int(math.sqrt(x) + 1)):
+        if sieve[x]:
+            break
+        if not sieve[i]:
+            continue
+        if x % i == 0:
+            factors.append(i)
+            x //= i
+    factors += prime_factorization(x, sieve)
+    return factors

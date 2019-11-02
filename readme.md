@@ -52,4 +52,5 @@
  * `is_prime`
  * `next_permutation`
  * `previous_permutation`
+ * `prime_factorization`
  

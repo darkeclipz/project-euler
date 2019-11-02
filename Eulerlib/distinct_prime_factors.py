@@ -2,11 +2,21 @@ import eulerlib
 import math
 
 
-def prime_factorization(x, sieve):
+def prime_factorization(x, sieve=None):
+    """
+    Factorize a number into the prime factorization.
+    Requires a sieve to be quick, if sieve is not specified
+    it will generate one itself.
+    :param x:
+    :param sieve:
+    :return:
+    """
     if x == 0:
         return []
     if x in [1, 2]:
         return [x]
+    if sieve is None:
+        sieve = eulerlib.prime_sieve(x)
     factors = []
     if sieve[x]:
         return [x]
