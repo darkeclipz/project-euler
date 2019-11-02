@@ -24,6 +24,12 @@ def distinct(x):
 
 
 def is_number(n):
+    """
+    Returns true if the number is an instance of an int.
+    or a float.
+    :param n: The number n to be tested.
+    :return: True if n is int or float.
+    """
     return isinstance(n, (int, float))
 
 
