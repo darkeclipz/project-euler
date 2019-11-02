@@ -47,3 +47,4 @@
  * `palindromes`
  * `string_split_2d`
  * `simplify_fraction`
+ * `quadratic.solve`

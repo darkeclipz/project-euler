@@ -1,6 +1,7 @@
 import math
 import time
 import quadratic
+import random
 
 
 def time_it(f, args=None):
@@ -245,6 +246,8 @@ def digits_to_int(x):
     :param x:
     :return:
     """
+    if x is None:
+        return ""
     return int(''.join([str(i) for i in x]))
 
 
@@ -572,3 +575,151 @@ def simplify_fraction(a, b):
     """
     c = gcd(a, b)
     return a / c, b / c
+
+
+def modpow(a, n, p):
+    """
+    Use Fermat's little theorem to calculate a^n mod p, which
+    can handle very large exponents. Calculates in O(log n) time.
+    :param a: base
+    :param n: exponent
+    :param p: mod
+    :return: (a^n) mod p
+    """
+    res = 1
+    a = a % p
+    while n > 0:
+        # if n is odd
+        if n & 1:
+            res = (res * a) % p
+        n = n >> 1  # n = n / 2
+        a = (a*a) % p
+
+    return res
+
+
+def is_prime(n, k):
+    """
+    Test if a number n is prime k-times.
+    :param n: The prime number to be tested.
+    :param k: The number of tests.
+    :return:
+    """
+    if n <= 1 or n == 4:
+        return False
+    if n <= 3:
+        return True
+    if is_even(n):
+        return False
+    while k > 0:
+
+        # Take random int in [2, n-2]
+        a = random.randint(2, n-1)
+
+        # Check if a and n are co-prime.
+        if gcd(n, a) != 1:
+            return False
+
+        # Fermat's little theorem
+        if modpow(a, n-1, n) != 1:
+            return False
+
+        k -= 1
+
+    return True
+
+
+def first_index_with_bigger_neighbour(P):
+    """
+    Find the first index from the right whose element is larger
+    than his neighbour.
+    :param P:
+    :return:
+    """
+    i = len(P) - 1
+    while i > 0 and P[i-1] >= P[i]:
+        i -= 1
+    return i
+
+
+def first_index_with_smaller_neighbour(P):
+    """
+    Find the first index from the right whose element is smaller
+    than his neighbour.
+    :param P:
+    :return:
+    """
+    i = len(P) - 1
+    while i > 0 and P[i-1] <= P[i]:
+        i -= 1
+    return i
+
+
+def next_permutation(P):
+    """
+    For any given permutation P, give the next permutation.
+    If there is no next permutation, P will be returned.
+    :param P:
+    :return:
+    """
+    n = len(P)
+
+    # Find the first index with the bigger neighbour.
+    i = first_index_with_bigger_neighbour(P)
+
+    # If this is the first, where i=0, then there is no next permutation.
+    if i == 0:
+        return P
+
+    # From the right, find a value in P that is smaller than
+    # the previous found value.
+    j = n - 1
+    while P[j] <= P[i-1]:
+        j -= 1
+
+    # Swap the values
+    P[i-1], P[j] = P[j], P[i-1]
+
+    # Restore the tail of the permutation.
+    j = n - 1
+    while i < j:
+        P[i], P[j] = P[j], P[i]
+        i += 1
+        j -= 1
+
+    return P
+
+
+def previous_permutation(P):
+    """
+    For any given permutation P, give the previous permutation.
+    If there is no pervious permutation, P will be returned.
+    :param P:
+    :return:
+    """
+    n = len(P)
+
+    # Find the first index with the bigger neighbour.
+    i = first_index_with_smaller_neighbour(P)
+
+    # If this is the first, where i=0, then there is no next permutation.
+    if i == 0:
+        return P
+
+    # From the right, find a value in P that is bigger than
+    # the previous found value.
+    j = n - 1
+    while P[j] >= P[i-1]:
+        j -= 1
+
+    # Swap the values
+    P[i-1], P[j] = P[j], P[i-1]
+
+    # Restore the tail of the permutation.
+    j = n - 1
+    while i < j:
+        P[i], P[j] = P[j], P[i]
+        i += 1
+        j -= 1
+
+    return P
