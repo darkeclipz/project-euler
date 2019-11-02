@@ -13,13 +13,6 @@ Returns the product of a `list` of numbers.
 product([1, 2, 3, 4, 5, 6])
 ```
 
-
-
-
-    720
-
-
-
 ## `factorial(n)`
 
 Returns the factorial n! of a number.
@@ -29,13 +22,6 @@ Returns the factorial n! of a number.
 factorial(6)
 ```
 
-
-
-
-    720
-
-
-
 ## `is_even(x)`
 
 Returns `true` if a number is even.
@@ -44,13 +30,6 @@ Returns `true` if a number is even.
 ```python
 is_even(2)
 ```
-
-
-
-
-    True
-
-
 
 ## `is_odd(X)`
 
@@ -306,21 +285,146 @@ restricted_divisors(1001)
 
 
 
-## `is_pandigital_to_n`
+## `is_pandigital_to_n(L, n)`
+
+Returns `true` if a list of numbers is pandigital from 1 up to n.
+
+
+```python
+is_pandigital_to_n([3, 1, 4, 2], 4)
+```
+
+
+
+
+    True
+
+
 
 # Sets
 
+## `equal_sets(L[S])`
 
-## `equal_sets`
-## `union_sets`
+Returns `true` if all the sets s in S are equal.
+
+
+```python
+S1 = set([1, 2, 3])
+S2 = set([1, 2, 3])
+S3 = set([1, 2, 3])
+equal_sets([S1, S2, S3])
+```
+
+
+
+
+    True
+
+
+
+## `union_sets(L[S])`
+
+Returns the union of all sets in S.
+
+
+```python
+S1 = set([1, 2, 3])
+S2 = set([4, 5, 6])
+S3 = set([7, 8, 9])
+union_sets([S1, S2, S3])
+```
+
+
+
+
+    {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+
+
 ## `intersect_sets`
+
+Returns the intersection of all sets in S.
+
+
+```python
+S1 = set([1, 2, 3])
+S2 = set([1, 3, 4])
+S3 = set([1, 5, 6])
+intersect_sets([S1, S2, S3])
+```
+
+
+
+
+    {1}
+
+
 
 # Primes
 
-## `is_prime`
-## `prime_counting_function`
-## `prime_counting_function_inv`
-## `prime_factorization`
+## `is_prime(x, k)`
+
+Test if a number n is prime k-times.
+
+
+```python
+is_prime(17, 1)
+```
+
+
+
+
+    True
+
+
+
+## `prime_counting_function(n)`
+
+Return the number of primes below a given number.
+
+
+```python
+prime_counting_function(100)
+```
+
+
+
+
+    21.71472409516259
+
+
+
+## `prime_counting_function_inv(x)`
+
+Returns the upper bound for a given number of primes.
+
+
+```python
+prime_counting_function_inv(22)
+```
+
+
+
+
+    102
+
+
+
+## `prime_factorization(x, S?)`
+
+actorizes a number into the prime factorization. Requires a sieve to be quick, if sieve is not specified it will generate one itself.
+
+
+```python
+prime_factorization(1001)
+```
+
+
+
+
+    [7, 11, 13]
+
+
 
 ## `prime_sieve(n)`
 
@@ -355,11 +459,97 @@ S[7]
 
 # Permutations
 
-## `permutations`
-## `next_permutation`
-## `previous_permutation`
-## `is_permutation`
-## `is_permutation3`
+## `permutations(L)`
+
+Generates all the permutations for a `list`.
+
+
+```python
+list(permutations(['A', 'B', 'C']))
+```
+
+
+
+
+    [['A', 'B', 'C'],
+     ['B', 'A', 'C'],
+     ['C', 'A', 'B'],
+     ['A', 'C', 'B'],
+     ['B', 'C', 'A'],
+     ['C', 'B', 'A']]
+
+
+
+## `next_permutation(L)`
+
+For any given permutation P, give the next permutation. If there is no next permutation, P will be returned.
+
+
+```python
+next_permutation(['A', 'B', 'C'])
+```
+
+
+
+
+    ['A', 'C', 'B']
+
+
+
+## `previous_permutation(L)`
+
+For any given permutation P, give the previous permutation. If there is no pervious permutation, P will be returned.
+
+
+```python
+previous_permutation(['A', 'C', 'B'])
+```
+
+
+
+
+    ['A', 'B', 'C']
+
+
+
+## `is_permutation(A, B)`
+
+Returns true if A and B are permutations of each other.
+
+
+```python
+is_permutation(['A', 'B'], ['B', 'A'])
+```
+
+
+
+
+    True
+
+
+
+## `is_permutation3(A, B, C)`
+
+Returns true if A, B and C are permutations of each other.
+
+
+```python
+A = [1, 2, 3]
+B = shift(A, 1)
+C = shift(B, 1)
+print(A, B, C)
+is_permutation3(A, B, C)
+```
+
+    [1, 2, 3] [2, 3, 1] [3, 1, 2]
+    
+
+
+
+
+    True
+
+
 
 # Fibonacci
 
@@ -429,14 +619,88 @@ list(primitive_pythagorean_triplet_generator(6))
 
 
 
-## `palindromes`
+## `palindrome_generator(lower, upper)`
+
+Generates all palindromes between [lower, upper].
+
+
+```python
+palindrome_generator(1, 120)
+```
+
+
+
+
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111]
+
+
+
+
+```python
+
+```
 
 # Strings
 
-## `string_split_2d`
-## `to_binary_string`
+## `string_split_2d(x)`
 
-## `is_palindrome`
+Split a string of 2D data into lists.
+
+
+```python
+string_split_2d("1,2\n3,4")
+```
+
+
+
+
+    [['1', '2'], ['3', '4']]
+
+
+
+## `to_binary_string(x)`
+
+Useful to convert a number into a binary number.
+
+
+```python
+to_binary_string(42)
+```
+
+
+
+
+    '101010'
+
+
+
+## `is_palindrome(x)`
+
+Returns true if a number or a string is a palindrome.
+
+
+```python
+is_palindrome(10001)
+```
+
+
+
+
+    True
+
+
+
+
+```python
+is_palindrome("alula")
+```
+
+
+
+
+    True
+
+
 
 # Utility
 
@@ -452,10 +716,10 @@ time_it(lambda x: prime_factorization(x), [67886])
     --- Timed execution for <lambda> ----------------
     Running...
     Solution is [2, 7, 13, 373]
-    Executed in 0.022966 seconds
+    Executed in 0.022939 seconds
     
 
-## `sieve_to_list(S)`
+## `sieve_to_list(L)`
 
 Returns the sieve as a list where the index is the number where it was `true`.
 
@@ -474,9 +738,18 @@ sieve_to_list(S)
 
 # Other
 
-## `lambertw`
+## `lambertw(x)`
+
+Lambert W function with Newton's Method.
 
 
 ```python
-
+lambertw(2)
 ```
+
+
+
+
+    0.852605502013737
+
+

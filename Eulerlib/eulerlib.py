@@ -471,11 +471,11 @@ def _heap_perm_(n, a):
     else:
         for i in range(n-1):
             for hp in _heap_perm_(n-1, a):
-                yield hp
+                yield list(hp)
             j = 0 if (n % 2) == 1 else i
             a[j], a[n - 1] = a[n - 1], a[j]
         for hp in _heap_perm_(n-1, a):
-            yield hp
+            yield list(hp)
 
 
 def shift(a, n=1):
@@ -502,6 +502,13 @@ def is_palindrome(x):
 
 
 def is_pandigital_to_n(x, n, zero_based=False):
+    """
+    Returns true if a list of numbers is pandigital from 1 up to n.
+    :param x:
+    :param n:
+    :param zero_based:
+    :return:
+    """
     return set(x) == set(range(0 if zero_based else 1, n + 1))
 
 
@@ -532,7 +539,7 @@ def _palindrome_number_generator():
         lower = higher
 
 
-def palindromes(lower, upper):
+def palindrome_generator(lower, upper):
     """
     Generates all palindromes between [lower, upper].
     https://stackoverflow.com/a/16344628
@@ -795,7 +802,7 @@ def equal_sets(S):
 
 def union_sets(S):
     """
-    Union of a list of sets.
+    Returns the union of all sets in S.
     :param S:
     :return:
     """
@@ -807,7 +814,7 @@ def union_sets(S):
 
 def intersect_sets(S):
     """
-    Intersection of a list of sets.
+    Returns the intersection of all sets in S.
     :param S:
     :return:
     """
