@@ -13,19 +13,9 @@ from eulerlib import *
 
 ## `distinct(x)`
 
-
-```python
-help(distinct)
-```
-
-    Help on function distinct in module eulerlib:
-    
-    distinct(x)
-        Returns a list of unique elements.
-        :param x: List of elements.
-        :return: List of unique elements.
-    
-    
+    Returns a list of unique elements.
+    :param x: List of elements.
+    :return: List of unique elements.
 
 
 ```python
@@ -41,20 +31,10 @@ distinct([1, 1, 1, 2, 3])
 
 ## `is_number(n)`
 
-
-```python
-help(is_number)
-```
-
-    Help on function is_number in module eulerlib:
-    
-    is_number(n)
-        Returns true if the number is an instance of an int.
-        or a float.
-        :param n: The number n to be tested.
-        :return: True if n is int or float.
-    
-    
+    Returns true if the number is an instance of an int.
+    or a float.
+    :param n: The number n to be tested.
+    :return: True if n is int or float.
 
 
 ```python
