@@ -48,3 +48,8 @@
  * `string_split_2d`
  * `simplify_fraction`
  * `quadratic.solve`
+ * `modpow`
+ * `is_prime`
+ * `next_permutation`
+ * `previous_permutation`
+ 

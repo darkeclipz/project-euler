@@ -629,7 +629,7 @@ def is_prime(n, k):
     return True
 
 
-def first_index_with_bigger_neighbour(P):
+def _first_index_with_bigger_neighbour(P):
     """
     Find the first index from the right whose element is larger
     than his neighbour.
@@ -642,7 +642,7 @@ def first_index_with_bigger_neighbour(P):
     return i
 
 
-def first_index_with_smaller_neighbour(P):
+def _first_index_with_smaller_neighbour(P):
     """
     Find the first index from the right whose element is smaller
     than his neighbour.
@@ -665,7 +665,7 @@ def next_permutation(P):
     n = len(P)
 
     # Find the first index with the bigger neighbour.
-    i = first_index_with_bigger_neighbour(P)
+    i = _first_index_with_bigger_neighbour(P)
 
     # If this is the first, where i=0, then there is no next permutation.
     if i == 0:
@@ -699,8 +699,8 @@ def previous_permutation(P):
     """
     n = len(P)
 
-    # Find the first index with the bigger neighbour.
-    i = first_index_with_smaller_neighbour(P)
+    # Find the first index with the smaller neighbour.
+    i = _first_index_with_smaller_neighbour(P)
 
     # If this is the first, where i=0, then there is no next permutation.
     if i == 0:
