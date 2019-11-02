@@ -743,7 +743,7 @@ def prime_factorization(x, sieve=None):
     if x in [1, 2]:
         return [x]
     if sieve is None:
-        sieve = prime_sieve(x)
+        sieve = prime_sieve(x + 1)
     factors = []
     if sieve[x]:
         return [x]
