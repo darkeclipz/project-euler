@@ -232,7 +232,7 @@ def is_deficient_number(x):
 
 def digits(x, base=10):
     """
-    Returns the the digits of a number.
+    Returns the digits of a number in a list.
     Reference: https://en.wikipedia.org/wiki/Digit_sum
     :param x: The number to sum the digits of.
     :param base: The base of the number system.
@@ -436,7 +436,7 @@ def is_even(n):
     :param n:
     :return:
     """
-    return not n | 0
+    return not n & 1
 
 
 def is_odd(n):
@@ -578,7 +578,7 @@ def simplify_fraction(a, b):
     :return:
     """
     c = gcd(a, b)
-    return a / c, b / c
+    return a // c, b // c
 
 
 def modpow(a, n, p):
