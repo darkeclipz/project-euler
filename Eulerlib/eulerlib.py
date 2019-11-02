@@ -751,5 +751,25 @@ def prime_factorization(x, sieve=None):
         if x % i == 0:
             factors.append(i)
             x //= i
-    factors += prime_factorization(x, sieve)
-    return factors
+    return factors + prime_factorization(x, sieve)
+
+
+def is_permutation(A, B):
+    """
+    Returns true if A and B are permutations of each other.
+    :param A:
+    :param B:
+    :return:
+    """
+    return set(A) == set(B)
+
+
+def is_permutation3(A, B, C):
+    """
+    Returns true if A, B and C are permutations of each other.
+    :param A:
+    :param B:
+    :param C:
+    :return:
+    """
+    return set(A) == set(B) == set(C)

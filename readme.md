@@ -53,4 +53,6 @@
  * `next_permutation`
  * `previous_permutation`
  * `prime_factorization`
+ * `is_permutation`
+ * `is_permutation3`
  
