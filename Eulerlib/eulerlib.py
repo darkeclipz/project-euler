@@ -421,9 +421,7 @@ def factorial(n):
     :param n:
     :return:
     """
-    return n * factorial(n - 1) \
-        if n > 0 \
-        else 1
+    return product(range(1, n + 1))
 
 
 def is_even(n):
@@ -432,7 +430,7 @@ def is_even(n):
     :param n:
     :return:
     """
-    return n % 2 == 0
+    return not n | 0
 
 
 def is_odd(n):
@@ -441,7 +439,7 @@ def is_odd(n):
     :param n:
     :return:
     """
-    return n % 2 == 1
+    return n & 1
 
 
 def permutations(a):
@@ -773,3 +771,41 @@ def is_permutation3(A, B, C):
     :return:
     """
     return set(A) == set(B) == set(C)
+
+
+def equal_sets(S):
+    """
+    Returns true if all the sets s in S are equal
+    to each other.
+    :param S:
+    :return:
+    """
+    s0 = S[0]
+    res = True
+    for i in range(1, len(S)):
+        res = res and s0 == S[i]
+    return res
+
+
+def union_sets(S):
+    """
+    Union of a list of sets.
+    :param S:
+    :return:
+    """
+    res = set()
+    for s in S:
+        res |= s
+    return res
+
+
+def intersect_sets(S):
+    """
+    Intersection of a list of sets.
+    :param S:
+    :return:
+    """
+    res = S[0]
+    for s in S:
+        res &= s
+    return res

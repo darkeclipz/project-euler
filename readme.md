@@ -55,4 +55,7 @@
  * `prime_factorization`
  * `is_permutation`
  * `is_permutation3`
+ * `equal_sets`
+ * `union_sets`
+ * `intersect_sets`
  
