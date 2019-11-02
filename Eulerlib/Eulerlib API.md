@@ -2,6 +2,62 @@
 from eulerlib import *
 ```
 
+# Eulerlib
+
+This is an overview of the most used functions from Eulerlib. 
+
+ * **General**
+   * `product(L)`
+   * `factorial(n)`
+   * `is_even(x)`
+   * `is_odd(x)`
+   * `shift(L, n)`
+   * `modpow(a, n, p)`
+   * `simplify_fraction(a, b)`
+   * `quadratic.solve(a, b, c)`
+   * `gcd(a, b)`
+   * `lcm(a, b)`
+   * `lcm3(a, b, c)`
+   * `distinct(L)`
+ * **Numbers**
+   * `is_number(x)`
+   * `divisors(x)`
+   * `proper_divisors(x)`
+   * `restricted_divisors(x)`
+   * `is_pandigital_to_n(L, n)`
+ * **Sets**
+   * `equal_sets(L[S])`
+   * `union_sets(L[S])`
+   * `intersect_sets(L[S])`
+ * **Primes**
+   * `is_prime(x, k)`
+   * `prime_counting_function(n)`
+   * `prime_counting_function_inv(x)`
+   * `prime_factorization(x)`
+   * `prime_sieve(n)`
+ * **Permutations**
+   * `permutations(L)`
+   * `next_permutation(L)`
+   * `previous_permutation(L)`
+   * `is_permutation(A, B)`
+   * `is_permutation3(A, B, C)`
+ * **Fibonacci**
+   * `is_fibonacci_number(x)`
+   * `fibonacci_n(n)`
+   * `fibonacci_n_inv(Fn)`
+ * **Generators**
+   * `primitive_pythagorean_triplet_generator(n)`
+   * `palindrome_generator(lower, upper)`
+ * **Strings**
+   * `string_split_2d(x)`
+   * `to_binary_string(x)`
+   * `is_palindrome(x)`
+ * **Utility**
+   * `time_it(f, [args])`
+   * `sieve_to_list(L)`
+ * **Other**
+   * `lambertw(x)`
+
 # General
 
 ## `product(L)`
@@ -159,7 +215,7 @@ lcm3(22, 3, 13)
 
 
 
-## `distinct(x)`
+## `distinct(L)`
 
 Returns a `list` of unique elements.
 
