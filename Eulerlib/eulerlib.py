@@ -230,20 +230,13 @@ def is_deficient_number(x):
     return sum(proper_divisors(x)) < x
 
 
-def digits(x, base=10):
+def digits(x):
     """
     Returns the digits of a number in a list.
-    Reference: https://en.wikipedia.org/wiki/Digit_sum
     :param x: The number to sum the digits of.
-    :param base: The base of the number system.
     :return: Sum of the number x.
     """
-    # return [int(d) for d in str(x)]
-    upper_bound = int(math.log(x, base))
-    reversed_digits = [1 / 10 ** n * (x % base ** (n + 1) - x % base ** n)
-                       for n in range(upper_bound + 1)]
-    return list(map(int, reversed_digits))[::-1]
-
+    return [int(d) for d in str(x)]
 
 
 def digits_to_int(x):
@@ -330,7 +323,7 @@ def lcm(a, b):
     :param b:
     :return:
     """
-    return a * b / gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def lcm3(a, b, c):
@@ -822,3 +815,14 @@ def intersect_sets(S):
     for s in S:
         res &= s
     return res
+
+
+def cumsum(L):
+    """
+    Returns a list with the cumulative sum of a list L.
+    :param S:
+    :return:
+    """
+    for i in range(1, len(L)):
+        L[i] += L[i-1]
+    return L

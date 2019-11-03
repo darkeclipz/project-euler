@@ -25,6 +25,8 @@ This is an overview of the most used functions from Eulerlib.
    * `proper_divisors(x)`
    * `restricted_divisors(x)`
    * `is_pandigital_to_n(L, n)`
+ * **Fractions**
+   * ...
  * **Sets**
    * `equal_sets(L[S])`
    * `union_sets(L[S])`
