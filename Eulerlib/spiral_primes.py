@@ -62,20 +62,18 @@ def is_prime(n, k):
 
 
 def sp():
-    n = 15000
-    rat = 1
+    k = 1
     primes = 0
-    for k in range(1, n+1):
-        _2nsq = 4*k*k + 4*k + 1
+    while(True):
+        p = 4*k*k + 4*k + 1 
         for j in range(4):
-            p = _2nsq - 2*j*k
-            if is_prime(p, 32):
+            q = p - 2*j*k
+            if is_prime(q, 20):
                 primes += 1
-        sl = 2*k + 1
-        num = 4*k + 1
-        rat = primes / num
+        rat = primes / (4*k + 1)
         if rat <= 0.1:
-            return sl
+            return 2*k + 1
+        k += 1
 
 
 pe.time_it(lambda: sp())
