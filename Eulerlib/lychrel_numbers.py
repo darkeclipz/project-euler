@@ -13,7 +13,6 @@ def count_lychrel(n):
     count = 0
     for i in range(10, n):
         if is_lychrel(i):
-            print(i)
             count += 1
     return count
 

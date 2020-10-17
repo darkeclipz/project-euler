@@ -487,11 +487,13 @@ def is_palindrome(x):
     :param x:
     :return:
     """
-    chars = [c for c in x] if not is_number(x) else digits(x)
-    for i in range(len(chars) // 2):
-        if chars[i] != chars[len(chars) - i - 1]:
-            return False
-    return True
+    strx = str(x)
+    return strx == strx[::-1]
+    # chars = [c for c in x] if not is_number(x) else digits(x)
+    # for i in range(len(chars) // 2):
+    #     if chars[i] != chars[len(chars) - i - 1]:
+    #         return False
+    # return True
 
 
 def is_pandigital_to_n(x, n, zero_based=False):
