@@ -21,7 +21,7 @@ def score(hand):
     # result = ((2, 1, 1, 1), (3, 11, 5, 4))
     return score, ranks
 
-# golfed version
+# golfed version - 280 chars, a tweet
 def f(H):
     z,s,L=zip,sorted,len
     R,U=z(*s([("23456789TJQKA".index(r),s)for r,s in H.split()])[::-1])
@@ -38,5 +38,3 @@ def poker_hands():
     return total_wins
 
 time_it(poker_hands)
-
-print(score('5H 5C 6S 7S KD'))
