@@ -6,4 +6,4 @@
 
 from eulerlib import modpow
 
-print(modpow(2, 7830457, 10**10)*28433+1)
+print(str(modpow(2, 7830457, 10**10)*28433+1)[-10:])
