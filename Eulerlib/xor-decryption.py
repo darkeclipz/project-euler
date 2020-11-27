@@ -33,7 +33,11 @@ def dot(u, v):
     return sum([u[i] * v[i] for i in range(len(u))])
 
 
-def count_alphabet_frequency(text):
+def count_frequency(text):
+    """
+    Returns a list with the percentage of the frequency
+    that a-z occur in the given text.
+    """
     alphabet = "".join(map(chr, range(97, 97 + 26)))
     n = len(text) - text.count(' ')
     frequencies = [text.count(letter) / n for letter in alphabet]
@@ -41,17 +45,22 @@ def count_alphabet_frequency(text):
 
 
 def decipher_xor_pad(cipher, pad_length):
+    """
+    Cracks an xor'ed text for a certain path length. It creates
+    a frequency table for all the letters for a certain pad, and
+    compares it with the Chi-squared test to a frequency table
+    for English letters. The lowest error is chosen as the pad.
+    """
     ciphers = [cipher[i::pad_length] for i in range(pad_length)]
     pad = [0] * pad_length
     for i in range(pad_length):
         min_error = inf
         min_pad = 0
-        # for p in range(ord('a'), ord('z') + 1):   # only search for a-z
         for p in range(256):
             decoded_cipher = [c^p for c in ciphers[i]]
-            decoded_cipher_text = "".join(map(chr, decoded_cipher))
-            decoded_cipher_frequencies = count_alphabet_frequency(decoded_cipher_text)
-            error = chi_squared(decoded_cipher_frequencies, alphabet_frequency)
+            decoded_text = "".join(map(chr, decoded_cipher))
+            frequencies = count_frequency(decoded_text)
+            error = chi_squared(frequencies, alphabet_frequency)
             if error < min_error:
                 min_error, min_pad = error, p
         pad[i] = min_pad
@@ -61,31 +70,64 @@ def decipher_xor_pad(cipher, pad_length):
 
 
 def guess_pad_length(cipher, max_length):
+    """
+    Guesses the pad length by using the same technique as cracking
+    the text. But now only for a single pad.
+    """
     min_error = inf
     min_i = 0
     for i in range(1, max_length + 1):
         for j in range(256):
             decoded_cipher = [c^j for c in cipher[i::i]]
             decoded_cipher_text = "".join(map(chr, decoded_cipher))
-            decoded_cipher_frequencies = count_alphabet_frequency(decoded_cipher_text)
-            error = chi_squared(decoded_cipher_frequencies, alphabet_frequency)
+            frequencies = count_frequency(decoded_cipher_text)
+            error = chi_squared(frequencies, alphabet_frequency)
             if error < min_error:
                 min_error, min_i = error, i
     return min_i
 
 
 def crack_xor_pad(cipher):
+    """
+    Cracks any xor-encrypted text with an unknown pad, and pad length.
+    Max pad length is 20, but can be modified.
+    """
     pad_length = guess_pad_length(cipher, 20)
     pad, decoded_cipher = decipher_xor_pad(cipher, pad_length)
     return pad, decoded_cipher
 
 
-pad, decoded_cipher = crack_xor_pad(ciphertext)
-print("Pad: {}\nText:\n{}".format(
-    ", ".join(map(str, pad)), 
-    "".join(map(chr, decoded_cipher)))
-)
+password = "code"
+message = """Although life was hard, these people lived on Greenland for many 
+years and it became their home. They built houses that were snug and strong 
+from stone, wood and turf."""
+#message = "secret message"
 
+pad = [ord(c) for c in password]
+n = len(pad)
+plaintext = [ord(c) for c in message]
+ciphertext = [0] * len(plaintext)
+
+for i in range(len(plaintext)):
+    ciphertext[i] = plaintext[i] ^ pad[i % n]
+    print('{} ^ {} = {}'.format(
+        str(plaintext[i]).rjust(3, ' '),
+        str(pad[i % n]).rjust(3, ' '),
+        str(ciphertext[i]).rjust(3, ' ')
+    ))
+
+print(ciphertext)
+
+pad, text = decipher_xor_pad(ciphertext, 4)
+print("".join(list(map(chr, text))))
+
+# pad, decoded_cipher = crack_xor_pad(ciphertext)
+# print("Pad: {}\nText:\n{}".format(
+#     ", ".join(map(str, pad)), 
+#     "".join(map(chr, decoded_cipher)))
+# )
+
+# print('Solution: {}'.format(sum(decoded_cipher)))
 
 """
     TODO:
