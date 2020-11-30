@@ -118,6 +118,7 @@ for i in range(len(plaintext)):
 
 print(ciphertext)
 
+print('Pad length = {}'.format(guess_pad_length(ciphertext, 8)))
 pad, text = decipher_xor_pad(ciphertext, 4)
 print("".join(list(map(chr, text))))
 
