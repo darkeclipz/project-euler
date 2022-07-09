@@ -23,7 +23,6 @@ class Triangle:
             and det * ((self.a.x - self.c.x) * (p.y - self.c.y) - (self.a.y - self.c.y) * (p.x - self.c.x)) >= 0
 
 
-# Open text file
 triangles = []
 count = 0
 origin = Point(0, 0)
@@ -35,11 +34,10 @@ with open('triangles.txt', 'r') as f:
         for i in range(0, len(coordinates), 2):
             p = Point(coordinates[i], coordinates[i+1])
             points.append(p)
-        t = Triangle(*points)
-        if t.contains(origin):
+        triangle = Triangle(*points)
+        if triangle.contains(origin):
             count += 1
-        triangles.append(t)
+        triangles.append(triangle)
 
 
-print(triangles[0])
 print('Solution = {}'.format(count))
