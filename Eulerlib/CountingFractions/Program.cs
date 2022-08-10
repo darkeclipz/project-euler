@@ -8,7 +8,7 @@ Benchmark(() =>
     int n = 1_000_000;
     FactorizationSieve sieve = new(n);
     long answer = 1 + SummatoryTotient(n, sieve);
-    Console.WriteLine(answer);
+    Console.WriteLine(answer); // -1 to get the correct answer...
 });
 
 void Benchmark(Action action)
