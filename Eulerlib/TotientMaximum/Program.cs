@@ -45,11 +45,6 @@ int BinaryGCD(int u, int v)
 // https://www.doc.ic.ac.uk/~mrh/330tutor/ch05s02.html
 double EulersTotient(int n, FactorizationSieve sieve) 
 {
-    // Strategy 2: use a prime factorization sieve to
-    // find the prime factorization of the number quickly,
-    // and then use the fact that:
-    //
-    // If the prime factorisation of n is given by n = p1e1*...*pnen, then φ(n) = n * (1 - 1/p1) * ... (1 - 1/pn).
     var distinctPrimeFactors = sieve.DistinctPrimeFactors(n).ToArray();
 
     if (distinctPrimeFactors.Length == 0)
@@ -66,9 +61,6 @@ double EulersTotient(int n, FactorizationSieve sieve)
 
     return product;
 }
-
-var sw = new Stopwatch();
-sw.Start();
 
 void Benchmark(Action action)
 {
