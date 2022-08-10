@@ -7,7 +7,7 @@ Benchmark(() =>
 {
     int n = 1_000_000;
     FactorizationSieve sieve = new(n);
-    long answer = 1 + SummaryTotient(n, sieve) - 2;
+    long answer = 1 + SummatoryTotient(n, sieve);
     Console.WriteLine(answer);
 });
 
@@ -21,7 +21,7 @@ void Benchmark(Action action)
     Console.WriteLine($"Total runtime is {elapsed} seconds.");
 }
 
-long SummaryTotient(int n, FactorizationSieve sieve)
+long SummatoryTotient(int n, FactorizationSieve sieve)
 {
     long sum = 0;
     for (int i = 1; i <= n; i++)
@@ -37,7 +37,7 @@ double EulersTotient(int n, FactorizationSieve sieve)
 
     if (distinctPrimeFactors.Length == 0)
     {
-        return 1;
+        return 0;
     }
 
     double product = n;
