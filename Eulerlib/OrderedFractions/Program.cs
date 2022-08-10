@@ -5,18 +5,20 @@ using System.Numerics;
 Stopwatch sw = new();
 sw.Start();
 
-int a = 2, b = 5, c = 3, d = 7;
+int a = 2, b = 5, c = 3, d = 7, s = 0;
 
 while (b + d <= 1e6)
 {
     a = a + c;
     b = b + d;
+    s++;
 }
 
 Console.WriteLine(a);
-
 sw.Stop();
-Console.WriteLine($"Runtime is {sw.ElapsedTicks} ticks.");
+
+Console.WriteLine($"Runtime is {sw.ElapsedTicks / 10000.0 / 1000.0} milliseconds.");
+Console.WriteLine($"Total steps: {s}");
 
 // Fraction x = new(2, 4);
 // Fraction y = new(3, 7);
