@@ -1,63 +1,88 @@
-table = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 
-         'C': 100, 'D': 500, 'M': 1000}
+# Rules:
+#
+# I = 1
+# V = 5
+# X = 10
+# L = 50
+# C = 100
+# D = 500
+# M = 1000
+#
+# Only one I, X, and C can be used as the leading numeral in part of a subtractive pair.
+# I can only be placed before V and X.
+# X can only be placed before L and C.
+# C can only be placed before D and M.
 
-rtable = sorted((v, k) for k, v in table.items())[::-1]
+lookup = {
+    'I': 1,
+    'IV': 4,
+    'V': 5,
+    'IX': 9,
+    'X': 10,
+    'XL': 40,
+    'L': 50,
+    'XC': 90,
+    'C': 100,
+    'CD': 400,
+    'D': 500,
+    'CM': 900,
+    'M': 1000
+}
+
+inv_lookup = {v:k for k,v in lookup.items()}
+
+class RomanNumeral:
+
+    def __init__(self, x):
+        self.value = self.decode(x)
+
+    def decode(self, x):
+        x = x.strip()
+        value = 0
+        i = 0
+        while i < len(x):
+            if x[i:i+2] in lookup:
+                value += lookup[x[i:i+2]]
+                i += 2
+            elif x[i] in lookup:
+                value += lookup[x[i]]
+                i += 1
+        return value
+
+    def encode(self, x):
+        rn = ""
+        values = [k for k,v in inv_lookup.items()]
+        values.sort(reverse = True)
+        while x > 0:
+            for i in values:
+                if i <= x:
+                    x -= i
+                    rn += inv_lookup[i]
+                    break
+        return rn
+
+    def __repr__(self):
+        return self.encode(self.value)
 
 
-def decimal(numeral):
-    result = 0
-    n = len(numeral)
-    skip = False
-    for i in range(n):
-        if skip:
-            skip = False
-            continue
-        if i < n-1 and table[numeral[i]] < table[numeral[i+1]]:
-            result += table[numeral[i+1]] - table[numeral[i]]
-            skip = True
-        else:
-            result += table[numeral[i]]
-    return result
+# print(RomanNumeral('IIIIIIIIIIIIIIII'))
+# print(RomanNumeral('VIIIIIIIIIII'))
+# print(RomanNumeral('VVIIIIII'))
+# print(RomanNumeral('XIIIIII'))
+# print(RomanNumeral('VVVI'))
+# print(RomanNumeral('XVI'))
 
 
+solution = 0
 
-def roman_numeral(decimal):
-    result = ""
-    i = 0
-    while decimal > 0:
-        if decimal > 10 and decimal >= rtable[i][0] - rtable[i+2][0] and decimal < rtable[i][0]:
-            result += rtable[i+2][1] + rtable[i][1]
-            decimal -= rtable[i+2][0] + rtable[i][0]
-        elif decimal >= rtable[i][0]:
-            result += rtable[i][1]
-            decimal -= rtable[i][0]
-        elif decimal >= rtable[i][0] - rtable[i+1][0] and decimal < rtable[i][0]:
-            result += rtable[i+1][1] + rtable[i][1]
-            decimal -= rtable[i+1][0] + rtable[i][0]
-
-        print('{} | {}'.format(result.ljust(14, ' '), decimal))
-
-        # if decimal > 10 and decimal >= rtable[i][0] - rtable[i+2][0] and decimal < rtable[i][0]:
-        #     result += rtable[i+2][1] + rtable[i][1]
-        #     decimal -= rtable[i][0] + rtable[i+2][0]
-        # elif decimal > 5 and decimal >= rtable[i][0] - rtable[i+1][0] and decimal < rtable[i][0]:
-        #     result += rtable[i+1][1] + rtable[i][1]
-        #     decimal -= rtable[i][0] + rtable[i+1][0]
-        # if decimal >= rtable[i][0]:
-        #     result += rtable[i][1]
-        #     decimal -= rtable[i][0]
-
-        if not decimal >= rtable[i][0]:
-            i += 1
-    return result
-
-
-def test(numeral):
-    dec = decimal(numeral)
-    result = roman_numeral(dec)
-    return numeral, dec, result
-
-
-print('{} = {} = {}'.format(*test('IIIIIIIIIIIIII')))
-print('{} = {} = {}'.format(*test('MMMMCCCXIV')))
-print('{} = {} = {}'.format(*test('MMDCCXXXXIIII')))  #XLIV
+with open('roman_numerals.txt', 'r') as f:
+    for line in f.readlines():
+        line = line.strip()
+        current_size = len(line)
+        rn = RomanNumeral(line)
+        optimal_size = len(str(rn))
+        solution += (current_size - optimal_size)
+        print("Reduced {} to {} saving {} characters.".format(line, str(rn), current_size - optimal_size))
+    
+print(solution)
+        
