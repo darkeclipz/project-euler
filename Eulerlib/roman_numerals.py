@@ -34,8 +34,8 @@ class RomanNumeral:
     }
 
     inv_char_lookup = {v:k for k,v in char_lookup.items()}
-    roman_numeral_chars = list(inv_char_lookup.keys())
-    roman_numeral_chars.sort(reverse = True)
+    roman_numeral_values = list(inv_char_lookup.keys())
+    roman_numeral_values.sort(reverse = True)
 
     def __init__(self, roman_numeral):
         self.value = self.decode(roman_numeral)
@@ -56,10 +56,10 @@ class RomanNumeral:
     def encode(self, decimal_number):
         roman_numeral = ""
         while decimal_number > 0:
-            for char in RomanNumeral.roman_numeral_chars:
-                if char <= decimal_number:
-                    decimal_number -= char
-                    roman_numeral += RomanNumeral.inv_char_lookup[char]
+            for value in RomanNumeral.roman_numeral_values:
+                if value <= decimal_number:
+                    decimal_number -= value
+                    roman_numeral += RomanNumeral.inv_char_lookup[value]
                     break
         return roman_numeral
 
